@@ -1,6 +1,6 @@
 // Define a function that is our component, always make sure to declare the props parameter so you can use props in your component
 // You can also destructure your props directly from the parameter list
-export default function  MovieDisplay ({ movie }){
+ function  MovieDisplay ({ movie }){
     //function to return loaded JSX
     const loaded = () => {
       return (
