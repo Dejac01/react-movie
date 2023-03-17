@@ -18,11 +18,15 @@ const [movie, setMovie] = useState(null);
      setMovie(data);
    };
 
+  //This will run on the first render but not on subsquent renders
+  useEffect(() => {
+    getMovie("Clueless");
+  }, []);
+
   return (
     <div className='App'>
        <Form moviesearch={getMovie} />
-
-<MovieDisplay/>
+      <MovieDisplay movie={movie}/>
 
     </div>
   )
